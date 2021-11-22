@@ -16,9 +16,9 @@ class Employee(models.Model):
     name = models.CharField(max_length = 50)
     age = models.IntegerField()
     gender = models.IntegerField(null=True, choices = GENDER_CHOICES)
-    address = models.CharField(max_length = 300)
+    address = models.CharField(max_length = 300, null=True)
     email = models.EmailField(max_length=100)
-    phone = models.CharField(max_length=12)
+    phone = models.CharField(max_length=12, null=True)
     date_of_joining = models.DateField(auto_now_add = False)
     department = models.ForeignKey(Department, null=True, on_delete= models.SET_NULL)
 
