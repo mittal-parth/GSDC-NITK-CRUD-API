@@ -11,21 +11,28 @@ class Query(graphene.ObjectType):
     all_department_employees = graphene.List(EmployeeType, id = graphene.ID())
 
     def resolve_all_employees(root, info, **kwargs):
+        # Querying all employees
         return Employee.objects.all()
 
     def resolve_employee(root, info, id):
+        #  Querying a single employee
         return Employee.objects.get(pk=id)
 
     def resolve_all_departments(root, info, **kwargs):
+        # Querying all departments
         return Department.objects.all()
 
     def resolve_department(root, info, id):
+        # Querying a single department
         return Department.objects.get(pk=id)
 
     def resolve_all_department_employees(root, info, id):
+        # Querying all employees of a particular department
         return Employee.objects.filter(department = id)
         
+## Employee Mutations 
 class CreateEmployee(graphene.Mutation):
+    # Arguments to the mutation
     class Arguments:
         name = graphene.String(required=True)
         age = graphene.Int(required=True)
@@ -36,6 +43,7 @@ class CreateEmployee(graphene.Mutation):
         date_of_joining = graphene.Date(required=True)
         department_id = graphene.ID(name="department", required=True)
     
+    # Return object
     employee = graphene.Field(EmployeeType)
 
     @classmethod
@@ -50,6 +58,7 @@ class CreateEmployee(graphene.Mutation):
             date_of_joining = date_of_joining,
             department_id = department_id
         )
+        # Return an instance of the mutation passing the employee in it
         return CreateEmployee(employee = employee)
 
 class UpdateEmployee(graphene.Mutation):
@@ -93,6 +102,7 @@ class DeleteEmployee(graphene.Mutation):
             employee.delete()
         return DeleteEmployee(employee = employee)
 
+## Department Mutations
 class CreateDepartment(graphene.Mutation):
     class Arguments:
         name = graphene.String(required=True)
@@ -134,6 +144,7 @@ class DeleteDepartment(graphene.Mutation):
             department.delete()
         return DeleteDepartment(department = department)
 
+# Wiring up the mutations
 class Mutation(graphene.ObjectType):
     create_employee = CreateEmployee.Field()
     update_employee = UpdateEmployee.Field()
