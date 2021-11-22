@@ -8,27 +8,27 @@ It uses <b>GraphQL</b> to communicate between the frontend and the backend.
 <h2> Screenshots </h2>
 <h4>Query - All Employees </h4>
 
-![Query - All Employees](Query-AllEmployees.jpg)<br>
+![Query - All Employees](./Screenshots/Query-AllEmployees.jpg)<br>
 
 <h4>Query - Get Single Employee</h4>
 
-![Query - Get Single Employee](Query-GetEmployee.jpg)<br>
+![Query - Get Single Employee](./Screenshots/Query-GetEmployee.jpg)<br>
 
 <h4>Query - All Department Employees</h4>
 
-![Query - All Department Employees](Query-AllDepartmentEmployees.jpg)<br>
+![Query - All Department Employees](./Screenshots/Query-AllDepartmentEmployees.jpg)<br>
 
 <h4>Mutation - Create Employee</h4>
 
-![Mutation - Create Employee](Mutation-Create.jpg)<br>
+![Mutation - Create Employee](./Screenshots/Mutation-Create.jpg)<br>
 
 <h4>Mutation - Update Employee</h4>
 
-![Mutation - Update Employee](Mutation-Update.jpg)<br>
+![Mutation - Update Employee](./Screenshots/Mutation-Update.jpg)<br>
 
 <h4>Mutation - Delete Employee</h4>
 
-![Mutation - Delete Employee](Mutation-Delete.jpg)<br>
+![Mutation - Delete Employee](./Screenshots/Mutation-Delete.jpg)<br>
 
 <br>
 
