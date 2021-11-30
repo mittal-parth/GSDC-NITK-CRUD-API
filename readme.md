@@ -63,6 +63,16 @@ _After ensuring that we are in a virtual environment (If not, use `workon test`)
 
 <p> Admin at http://127.0.0.1:8000/admin </p>
 
+<h2>Implemented Features</h2>
+<ul>
+    <li>Query Employee Details</li>
+    <li>Query based on department</li>
+    <li>Create Update and Delete Employee Details</li>
+    <li>Uses GraphQL</li>
+</ul>
+<h2>Tech Stack</h2>
+<code><img height="40" width="40" src="https://img.icons8.com/color/48/000000/python--v1.png" alt="Python"></code>
+<code><img height="40" width="40" src="https://user-images.githubusercontent.com/76661350/143919769-d61dd74a-ef98-49db-b1d0-781cb2df501c.png"></code>
 <br>
 <h2>References:</h2>
 <a href="https://docs.djangoproject.com/en/3.2/">Django's Official Documentation</a><br>
